@@ -5,6 +5,7 @@ const helmet = require('helmet')
 const mongoose = require('mongoose')
 
 const directoryRoutes = require('./routes/directory')
+const fileRoutes = require('./routes/file')
 
 const init = async () => {
     const app = express()
@@ -13,6 +14,7 @@ const init = async () => {
     app.use(express.json())
     app.use(express.urlencoded({ extended: false }))
     app.use('/api/dir', directoryRoutes)
+    app.use('/api/file', fileRoutes)
     try {
         await mongoose.connect(process.env.DB_URL, {
             useNewUrlParser: true,

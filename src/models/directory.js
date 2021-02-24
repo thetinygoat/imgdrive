@@ -7,6 +7,10 @@ const schema = new Schema(
             type: Schema.Types.ObjectId,
             default: null,
         },
+        size: {
+            type: Number,
+            default: 0,
+        },
     },
     { timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' } }
 )
