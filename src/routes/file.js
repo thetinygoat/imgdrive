@@ -27,7 +27,8 @@ const fileUpload = async (req, res) => {
         const { path, name, size } = file
 
         const image = sharp(path)
-        const { format, width, height } = await image.metadata()
+        let { format, width, height } = await image.metadata()
+        if (format === 'jpeg') format = 'jpg'
         let newFile
         if (parent) {
             newFile = await File.create({
