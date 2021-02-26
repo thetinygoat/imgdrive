@@ -11,7 +11,8 @@
  - `/api/dir/new?parent={parent_id}` => create a new folder with given parent_id
  - `/api/dir/:id/rename` => rename a folder with given ID
  - `/api/dir/:id/children` => get all children of a folder with given ID.
- - `DELETE`, `/api/:id` => delete a folder and all its children with given ID.
+ - `DELETE`, `/api/dir/:id` => delete a folder and all its children with given ID.
+ - `/api/dir/:id/size` => returns size of a folder 
 
 ### File routes
 

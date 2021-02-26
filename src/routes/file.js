@@ -5,7 +5,6 @@ const File = require('../models/file')
 const Dir = require('../models/directory')
 const { Types } = require('mongoose')
 const { createResponse, status } = require('../helpers')
-const file = require('../models/file')
 
 const fileUpload = async (req, res) => {
     const form = new formidable.IncomingForm()
